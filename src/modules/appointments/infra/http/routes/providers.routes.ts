@@ -22,4 +22,5 @@ providersRouter.get(
   dayAvailabilityController.index,
 );
 
+
 export default providersRouter;
