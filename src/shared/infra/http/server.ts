@@ -8,6 +8,7 @@ import 'express-async-errors';
 
 import uploadConfig from '@config/upload';
 import AppError from '@shared/errors/AppError';
+import rateLimiter from './middlewares/RateLimiter';
 import routes from './routes';
 
 import '@shared/infra/typeorm';
@@ -15,6 +16,7 @@ import '@shared/container';
 
 const app = express();
 
+app.use(rateLimiter);
 app.use(cors());
 app.use(express.json());
 app.use('/files', express.static(uploadConfig.uploadsFolder));
@@ -28,11 +30,11 @@ app.use((err: Error, request: Request, response: Response, _: NextFunction) => {
       message: err.message,
     });
   }
-  console.log(err);
+
   return response.status(500).json({
     status: 'error',
     message: 'Internal server error',
   });
 });
 
-app.listen(3333, () => console.log('Running on port 3333'));
+app.listen(3333);

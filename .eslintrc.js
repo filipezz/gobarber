@@ -21,6 +21,8 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'prettier'],
   rules: {
+    '@typescript-eslint/ban-types':'off',
+    '@typescript-eslint/no-explicit-any':'off',
     'prettier/prettier': 'error',
     'camelcase':'off',
     'class-methods-use-this': 'off',
