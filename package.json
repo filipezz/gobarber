@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
-    "docker": "docker start gobarber-postgres mongodb",
+    "docker": "docker start postgres mongodb",
     "build": "tsc",
     "start": "ts-node  -r tsconfig-paths/register src/shared/infra/http/server.ts",
     "dev:server": "ts-node-dev -r tsconfig-paths/register --transpileOnly --ignore-watch node_modules src/shared/infra/http/server.ts",
