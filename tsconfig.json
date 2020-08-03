@@ -5,27 +5,27 @@
     "module": "commonjs",
 
     "outDir": "./dist",
-     "rootDir": "./src",
+    "rootDir": "./src",
 
     "strict": true,
 
-     "strictPropertyInitialization": false,
+    "strictPropertyInitialization": false,
 
-     "baseUrl": "./src",
-     "allowJs": true,
-     "paths": {
-       "@modules/*":["modules/*"],
-       "@config/*":["config/*"],
-       "@shared/*":["shared/*"]
+    "baseUrl": "./src",
+    "allowJs": true,
+    "paths": {
+    "@modules/*":["modules/*"],
+    "@config/*":["config/*"],
+      "@shared/*":["shared/*"]
      },
 
-    "esModuleInterop": true,
+  "esModuleInterop": true,
 
-     "experimentalDecorators": true,
-     "emitDecoratorMetadata": true,
+  "experimentalDecorators": true,
+  "emitDecoratorMetadata": true,
 
 
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+  "skipLibCheck": true,
+  "forceConsistentCasingInFileNames": true
   }
 }
