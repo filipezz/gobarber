@@ -2,6 +2,7 @@ import 'reflect-metadata';
 import 'dotenv/config';
 
 import express, { NextFunction, Request, Response } from 'express';
+import morgan from 'morgan';
 import cors from 'cors';
 import { errors } from 'celebrate';
 import 'express-async-errors';
@@ -20,6 +21,7 @@ app.use(cors());
 app.use(express.json());
 app.use('/files', express.static(uploadConfig.uploadsFolder));
 app.use(rateLimiter);
+app.use(morgan('tiny'));
 app.use(routes);
 
 app.use(errors());
